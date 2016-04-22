@@ -64,6 +64,7 @@ TokenType getToken(void)
     yyin = source;
     yyout = listing;
   }
+
   currentToken = yylex();
   strncpy(tokenString,yytext,MAXTOKENLEN);
   if (TraceScan) {
